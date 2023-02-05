@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+*{
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   }
+html,
+body{
+    display: flex;
+    flex-direction: column;
+    font-size: 62.5%;
+   }
+body::-webkit-scrollbar{
+        width: 12px;               /* width of the entire scrollbar */
+    }
+body::-webkit-scrollbar-track{
+        background: #f5f6f7;        /* color of the tracking area */
+    }
+body::-webkit-scrollbar-thumb{
+        background-color: #404040;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 2px solid #f5f6f7;  /* creates padding around scroll thumb */
+    }
+
+/* CSS por partes*/
+    .todo{
+        background-image: url(images/fondo.jpg);
+        background-repeat: no-repeat;
+    }
+    .navbar{
+        padding: 1.8rem;
+        font-size: 2.4rem;
+    }      
+    .lista {
+        animation: 1s ease-out 0s 1 slideInFromLeft;
+    }
+    .navbar-brand{
+        width: 25%;
+    }
+    .navbar-brand img{
+        width: 50px;
+    }
+    .navbar-collapse{
+        align-items: center;
+        width: 50%;
+        flex-grow: unset;
+    }
+    .lista{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-item a{
+        padding:14px 16px;
+        color: white;
+        font-family: "Raleway", sans-serif;
+    }
+    .nav-item a:hover {
+        color: #e63946 !important;
+        text-decoration: underline;
+    }
+    .social{
+        width: 25%;
+    }
+    .presentate{
+        height: 70vh;
+        overflow: hidden;
+    }
+    .angelita{
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        align-content: end;
+        transform: translateY(-24%);
+        z-index: 1;
+    }
+    .angelita img{
+        height: 80%;
+        opacity: 80%;
+    }
+    .encabeza{
+        position: relative;
+        height: 24%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #404040;
+        transform: translateY(90%);
+        z-index: 2;
+    }
+    .encabeza h1{
+        font-size: 8rem;
+        overflow: hidden;
+        animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+    .encabeza h5{
+        font-size: 2.4rem;
+        overflow: hidden;
+        animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+    .titulo{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .titulo h1{
+        font-size: 4.8rem;
+        color: #3c6e71;
+        font-family: 'Lato', sans-serif;
+        text-decoration: underline #4d908e;
+    }
+    .titulo p{
+        width: 80%;
+        font-size: 2.4rem;
+    }
+    .titulo h3{
+        font-size: 4rem;
+        color: #3c6e71;
+        overflow: hidden;
+    }
+    .encierro{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .caja{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+    .caja .ilustrator, .caja .Photoshop, .caja .Design, .caja .Sketch,
+    .caja .Office, .caja .Autocad, .caja .Rhinoceros, .caja .EDmax, 
+    .caja .Lumi, .caja .Twin, .caja .Revit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .progress{
+        height: 20px;
+        width: 78%;
+    }
+    .progress div{
+        font-size: 1.2rem;
+    }
+    .caja .ilustrator img{
+      width: 100px;
+    }
+    .caja .Photoshop img{
+        width: 78px;
+    }
+    .caja .Design img{
+        width: 85px;
+    }
+    .caja .Sketch img{
+      width: 85px;
+    }
+    .caja .Office img{
+      width: 80px;
+    }
+    .caja .Autocad img{
+      width: 80px;
+    }
+    .caja .Rhinoceros img{
+      width: 80px;
+    }
+    .caja .EDmax img{
+      width: 80px;
+    }
+    .caja .Lumi img{
+      width: 80px;
+    }
+    .caja .Twin img{
+      width: 80px;
+    }
+    .caja .Revit img{
+      width: 80px;
+    }
+    footer span{
+        font-size: 1.2rem;
+    }
+
+    /* Keyframes*/
+      /* The typing effect */
+  @keyframes typing {
+        from { width: 0}
+        to { width: 50%}
+  }
+      /* The typewriter cursor effect */
+  @keyframes blink-caret {
+        from, to { border-color: transparent}
+        50% { border-color: orange}
+  }
+  @keyframes Appear{
+        0% {
+            transform: translateY(-200%);
+          }
+          100% {
+            transform: translateY(0);
+          }
+  }
+  @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+  }
+
+    /* Medias */
+  @media screen and (max-width: 750px) {
+        .encabeza{
+          color: #ffffff;
+        }
+  }
+  @media screen and (max-width: 500px) {
+        .encabeza h1{
+          font-size: 5rem;
+        }
+        .encabeza h5{
+          font-size: 1.5rem;
+        }
+        .titulo h1{
+          font-size: 2.4rem;
+        }
+        .titulo p{
+          font-size: 1.5rem;
+        }
+        .titulo h3{
+          font-size: 2rem;
+        }
+  }
