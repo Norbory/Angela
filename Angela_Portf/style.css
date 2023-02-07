@@ -27,8 +27,9 @@ body::-webkit-scrollbar-thumb{
 
 /* CSS por partes*/
     .todo{
-        background-image: url(images/fondo.jpg);
+        background-image: url(images/fondo.png);
         background-repeat: no-repeat;
+        background-size: cover;
     }
     .navbar{
         padding: 1.8rem;
@@ -41,7 +42,7 @@ body::-webkit-scrollbar-thumb{
         width: 25%;
     }
     .navbar-brand img{
-        width: 50px;
+        width: 80px;
     }
     .navbar-collapse{
         align-items: center;
@@ -56,7 +57,7 @@ body::-webkit-scrollbar-thumb{
     }
     .nav-item a{
         padding:14px 16px;
-        color: white;
+        color: #2f3e46;
         font-family: "Raleway", sans-serif;
     }
     .nav-item a:hover {
@@ -69,31 +70,35 @@ body::-webkit-scrollbar-thumb{
     .presentate{
         height: 70vh;
         overflow: hidden;
-    }
-    .angelita{
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        align-content: end;
-        transform: translateY(-24%);
-        z-index: 1;
-    }
-    .angelita img{
-        height: 80%;
-        opacity: 80%;
-    }
-    .encabeza{
-        position: relative;
-        height: 24%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        color: #404040;
-        transform: translateY(90%);
-        z-index: 2;
+    }
+    .perfiles{
+      display: flex;
+      flex-direction: row;
+    }
+    .angelita{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+    }
+    .angelita img{
+        height: 80%;
+    }
+    .encabeza{
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #d62828;
+    }
+    .boton{
+      width: auto;
+      height: 10%;
     }
     .encabeza h1{
         font-size: 8rem;
@@ -217,8 +222,9 @@ body::-webkit-scrollbar-thumb{
 
     /* Medias */
   @media screen and (max-width: 750px) {
-        .encabeza{
-          color: #ffffff;
+
+        .perfiles{
+          flex-direction: column;
         }
   }
   @media screen and (max-width: 500px) {
@@ -236,5 +242,8 @@ body::-webkit-scrollbar-thumb{
         }
         .titulo h3{
           font-size: 2rem;
+        }
+        .angelita img{
+          height: 30%;
         }
   }
