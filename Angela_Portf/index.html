@@ -200,11 +200,11 @@
         <img src="images/costado.jfif" style="width:100%">
       </div>
       <div class="column">
-        <form action="/action_page.php">
+        <form action="https://formsubmit.co/mandros.angelof@pucp.edu.pe" method="POST">
           <label for="fname" class="texto">Nombre</label>
-          <input type="text" id="fname" name="firstname" placeholder=" Tu nombre...">
+          <input type="text" id="fname" name="firstname" placeholder=" Tu nombre..." required>
           <label for="lname" class="texto">Apellido</label>
-          <input type="text" id="lname" name="lastname" placeholder="Tu apellido...">
+          <input type="text" id="lname" name="lastname" placeholder="Tu apellido..." required>
           <label for="country" class="texto">Pais</label>
           <select id="country" name="country">
             <option value="Peru">Peru</option>
@@ -212,7 +212,7 @@
             <option value="usa">USA</option>
           </select>
           <label for="subject" class="texto">Mensaje</label>
-          <textarea id="subject" name="subject" placeholder="Escribe algo..." style="height:170px"></textarea>
+          <textarea id="subject" name="subject" placeholder="Escribe algo..." style="height:170px" required></textarea>
           <input type="submit" value="Envia">
         </form>
       </div>
