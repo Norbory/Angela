@@ -9,6 +9,7 @@
    }
 html,
 body{
+    scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
     font-size: 62.5%;
@@ -27,14 +28,19 @@ body::-webkit-scrollbar-thumb{
 
 /* CSS por partes*/
     .todo{
-        background-image: url(images/fondo.jfif);
+        /* background-image: url(images/fondo.jfif);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; */
+        height: 90vh;
+        overflow: hidden;
     }
     .navbar{
+        /* width: 100%;
+        position: fixed; */
         padding: 1.8rem;
-        font-size: 2.4rem;
-    }      
+        font-size: 1.8rem;
+        background-color: rgb(13, 27, 42,0.8);
+    }
     .lista {
         animation: 1s ease-out 0s 1 slideInFromLeft;
     }
@@ -57,7 +63,7 @@ body::-webkit-scrollbar-thumb{
     }
     .nav-item a{
         padding:14px 16px;
-        color: #2f3e46;
+        color: #e0e1dd;
         font-family: "Raleway", sans-serif;
     }
     .nav-item a:hover {
@@ -67,8 +73,18 @@ body::-webkit-scrollbar-thumb{
     .social{
         width: 25%;
     }
+    .social a svg{
+      color: #e0e1dd;
+    }
+    .carrusel{
+      height: 80vh;
+      overflow: hidden;
+    }   
+    .carousel-inner img{
+      max-height: 500px;
+    }
     .presentate{
-        height: 70vh;
+        /* height: 70vh;*/
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -78,12 +94,21 @@ body::-webkit-scrollbar-thumb{
     .perfiles{
       display: flex;
       flex-direction: row;
+
+      justify-content: center;
+      align-items: center;
     }
     .angelita{
+        order: 1;
+        width: 36%;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow:  17px 17px 15px #d0d0d0,
+                     -17px -17px 15px #f0f0f0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-content: center;
+        align-content: end;
     }
     .angelita img{
         height: 80%;
@@ -95,10 +120,13 @@ body::-webkit-scrollbar-thumb{
         justify-content: center;
         align-items: center;
         color: #ae2012;
+        transform: translateY(-350%);
     }
     .boton{
+      position: relative;
       width: auto;
       height: 10%;
+      transform: translateY(-1500%);
     }
     .encabeza h1{
         font-size: 8rem;
@@ -111,23 +139,26 @@ body::-webkit-scrollbar-thumb{
         animation: typing 2.5s steps(40, end), blink-caret .75s step-end infinite;
     }
     .titulo{
+        order: 2;
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .titulo h1{
+    .titulo h1,.titulo1 h1{
         font-size: 4.8rem;
         color: #3c6e71;
         font-family: 'Lato', sans-serif;
         text-decoration: underline #4d908e;
+        margin-bottom: 35px;
+    }
+    .titulo1{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     .titulo p{
+        text-align: justify;
+        text-justify: inter-word;
         width: 80%;
         font-size: 2.4rem;
-    }
-    .titulo h3{
-        font-size: 4rem;
-        color: #3c6e71;
-        overflow: hidden;
     }
     .encierro{
       display: flex;
@@ -229,6 +260,7 @@ body::-webkit-scrollbar-thumb{
     }
     /* Style the container/contact section */
     .container {
+      margin-top: 20px;
       border-radius: 5px;
       background-color: #f2f2f2;
       padding: 10px;
@@ -279,9 +311,17 @@ body::-webkit-scrollbar-thumb{
 
     /* Medias */
   @media screen and (max-width: 750px) {
-
         .perfiles{
           flex-direction: column;
+        }
+        .angelita{
+          order: 2;
+        }
+        .titulo{
+          order: 1;
+        }
+        .carousel-inner img{
+          min-height: 400px;
         }
   }
   @media screen and (max-width: 500px) {
@@ -302,6 +342,9 @@ body::-webkit-scrollbar-thumb{
         }
         .angelita img{
           height: 30%;
+        }
+        .encabeza{
+          transform: translateY(-450%);
         }
   }
       /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
