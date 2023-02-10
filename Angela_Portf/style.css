@@ -280,7 +280,74 @@ body::-webkit-scrollbar-thumb{
       display: table;
       clear: both;
     }
-
+    .division{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .espacio{
+     width: 48vw;
+    }
+    .circulo{
+      width: 4vw;
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dot {
+      height: 50px;
+      width: 50px;
+      background-color: #219ebc;
+      border-radius: 50%; 
+      display: inline-block;
+    }
+    .dotl {
+      height: 50px;
+      width: 50px;
+      background-color: #e63946;
+      border-radius: 50%; 
+      display: inline-block;
+    }
+    .experimenta{
+      padding-left: 20px;
+    }
+    .experimenta h2,.experimenta h5,.experimenta p{
+      overflow: hidden;
+    }
+    .experimenta h2{
+      font-size: 2.4rem;
+    }
+    .experimenta h5{
+      font-size: 2rem;
+    }
+    .experimenta p{
+      font-size: 1.8rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    .division .experimenta .btn{
+      background-color: #219ebc;
+      height: 40px;
+    }
+    .division .experimenta div img{
+      height: 180px;
+    }
+    .distribuye{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .distribuye .btn{
+      background-color: #219ebc;
+      height: 60px;
+      width: 100px;
+      font-size: 1.6rem;
+    }
+    .modal-body{
+      background-color: #D5D7D6;
+    }
     /* Keyframes*/
       /* The typing effect */
   @keyframes typing {
@@ -346,11 +413,17 @@ body::-webkit-scrollbar-thumb{
         .encabeza{
           transform: translateY(-450%);
         }
+        .division .experimenta div img{
+          height: 80px;
+        }
   }
-      /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 600px) {
+ /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
         .column, input[type=submit] {
           width: 100%;
           margin-top: 0;
         }
-      }
+        .division .espacio,.division .circulo{
+          display: none;
+        }
+  }
